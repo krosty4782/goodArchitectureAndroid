@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+<data>
+    <variable
+        name="viewModel"
+        type="com.films.films.viewModels.MainViewModel" />
+</data>
+<RelativeLayout
+    android:paddingTop="@dimen/margins"
+    android:paddingBottom="@dimen/margins"
+    android:paddingRight="@dimen/margins"
+    android:paddingLeft="@dimen/margins"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/search_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/margins"
+        >
+
+        <EditText
+            android:id="@+id/searchEdit"
+            style="@style/form_input_white"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".80"
+            android:hint="@string/search_film"/>
+
+        <Button
+            android:id="@+id/searchButton"
+            style="@style/button_black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/search_button"
+            android:layout_weight=".20"
+            android:onClick="@{viewModel.searchClicked}"
+            android:layout_toRightOf="@id/searchEdit"/>
+    </LinearLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/filmList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_container"
+        tools:listitem="@layout/film_item"></android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/film_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="@{viewModel.mErrorVisibility}"
+        android:text="@{viewModel.mErrorText}"
+        android:layout_below="@id/search_container"
+        android:layout_centerHorizontal="true"/>
+
+
+</RelativeLayout>
+</layout>

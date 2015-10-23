@@ -1,0 +1,26 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    </style>
+
+    <style name="form_input_white" parent="@android:style/Widget.EditText">
+        <item name="android:background">@color/white</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:minHeight">@dimen/input_height</item>
+        <item name="android:paddingLeft">@dimen/spacing_default</item>
+        <item name="android:paddingRight">@dimen/spacing_default</item>
+        <item name="android:textSize">@dimen/text_small</item>
+        <item name="android:textColor">@color/text_dark</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+    </style>
+
+    <style name="button_black" parent="@android:style/Widget.Button">
+        <item name="android:layout_height">@dimen/button_primary_height</item>
+        <item name="android:textSize">@dimen/text_medium</item>
+        <item name="android:textColor">@color/text_light</item>
+        <item name="android:background">@drawable/button_bg_dark_rounded</item>
+    </style>
+
+</resources>

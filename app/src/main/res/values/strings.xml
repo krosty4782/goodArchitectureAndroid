@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Films</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="search_film">Search</string>
+    <string name="search_button">Search</string>
+    <string name="network_error">Network Error</string>
+    <string name="empty_history">You haven\'t done any search yet</string>
+    <string name="search_history">Search History</string>
+    <string name="api_url">http://www.omdbapi.com</string>
+    <string name="history">history</string>
+    <string name="no_results">No results for your query</string>
+</resources>
